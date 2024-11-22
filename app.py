@@ -1,10 +1,11 @@
-import streamlit as st
-import numpy as np
-import pandas as pd
-from sklearn.preprocessing import LabelEncoder
+# noinspection PyUnresolvedReferences
 import joblib
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+# noinspection PyUnresolvedReferences
+import numpy as np
+# noinspection PyUnresolvedReferences
+import pandas as pd
+# noinspection PyUnresolvedReferences
+import streamlit as st
 
 # Load the label encoders
 label_encoder_occupation = joblib.load("label_encoder_occupation.joblib")
@@ -69,7 +70,6 @@ def main():
     st.title("Fraud Detection App")
 
     st.header("User Input")
-    name = st.text_input("Name")
     pan_card = st.text_input("PAN Card")
     aadhar_card = st.text_input("Aadhar Card")
     bank_account_no = st.text_input("Bank Account No")
